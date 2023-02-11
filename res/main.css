@@ -1,0 +1,207 @@
+@import url('https://fonts.googleapis.com/css2?family=Carter+One&family=Cinzel:wght@500&family=Lexend+Deca:wght@300&family=Luckiest+Guy&family=Poppins:wght@300&family=Rouge+Script&family=Yanone+Kaffeesatz&display=swap');
+
+/* font 
+1. Luckiest Guy - Blog Title
+2. Carter One - link1
+3. Rouge Script - Description1
+4. Yanone Kaffeesatz - Description2;
+5. Lexend Deca - caption
+6. Cinzel - sub-head;
+7. Poppins - link2
+
+*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --blog_title: 'Luckiest Guy';
+    --sub-title1: 'Cinzel';
+    --sub-title2: 'Carter One';
+    --link: 'Poppins';
+    --describ: 'Rouge Script';   
+    --caption1: 'Lexend Deca';
+    --caption2: 'Yanone Kaffeesatz';
+
+    /* main colors */
+    --color1: #4400cb;
+    --color2: #000f4a;
+    --color3: #b1c8db;
+    --color4: #66fcf1;
+    --color5: #eee2dc;
+
+
+    /* font-size */
+    --desc-font-size: 13pt;
+    --default-fontsize: 10pt;
+    --min-fSize: 8pt;
+   
+}
+
+body {
+    background-color: var(--color5);
+    font-size: var(--default-fontsize);
+}
+
+.blog-initial {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.blog-initial h1 {
+    width: 100%;
+    font-family: var(--blog_title);
+    letter-spacing: 4px;
+    text-align: center;
+    font-size: 23pt;
+}
+
+.marquee {
+    font-family: var(--describ);
+    font-size: var(--desc-font-size)
+}
+
+.blog-initial p {
+    font-family: var(--caption1);
+}
+
+nav {
+    width: 100%;
+    height: auto;
+    background-color: var(--color2);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+nav .nav-tool {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    list-style: none;
+    background-color: var(--color3);
+}
+
+.nav-tool * {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-transition: all 0.35s ease;
+    transition: all 0.35s ease;
+}
+
+.nav-tool a {
+    position: relative;
+    color: rgba(3, 3, 3, 0.5);
+    cursor: default;
+    padding: 0;
+    text-decoration: none;
+    height: 30px;
+    width: 70px;
+    font-size: var(--min-fSize);
+    font-family: var(--caption2);
+    font-weight: bold;
+}
+
+.nav-tool a:before,
+.nav-tool a:after {
+    position: absolute;
+    height: 28px;
+    width: 28px;
+    content: '';
+    -webkit-transition: all 0.35s ease;
+    transition: all 0.35s ease;
+    opacity: 0;
+}
+
+.nav-tool a:before {
+    right: 0;
+    top: 0;
+    border-right: 1px solid #07d111;
+    border-top: 1px solid #07d111;
+    transform: translate(-100%, 50%);
+}
+
+.nav-tool a:after {
+    left: 0;
+    bottom: 0;
+    border-left: 1px solid #07d111;
+    border-bottom: 1px solid #07d111;
+    transform: translate(100%, -50%);
+}
+
+.nav-tool a:hover {
+    color: #ffffff;
+}
+
+.nav-tool a:hover::before,
+.nav-tool a:hover::after {
+    transform: translate(0px, 0px);
+    opacity: 1;
+}
+
+/*----------------*/
+
+nav .link {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+nav a {
+    color: var(--color4);
+    text-decoration: none;
+    width: 170px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: var(--link);
+}
+
+/* nav a:hover {
+    transition: 0.8s;
+    background-color: var(--color4);
+    color: var(--color2);
+    height: 50px;
+} */
+
+.dropdown-menu {
+    display: flex;
+    justify-content: flex-end;
+    padding: 0px 12px 0px 0px;
+}
+
+.dropdown-menu::after {
+    position: absolute;
+    content: '>';
+    width: 30px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translateX(100%);
+}
+
+.dropdown-menu:hover::after {
+    background-color: var(--color1);
+    color: var(--color4);
+    transition: 0.8s;
+}
+
+.dropdown-list {
+    position: absolute;
+    width: 200px;
+    height: auto;
+    background-color: var(--color3);
+    color: var(--color4);
+    transform: translate(79%, 0px);
+}
+
