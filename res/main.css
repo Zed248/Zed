@@ -266,6 +266,7 @@ nav .link {
 
 
 .dropdown-list {
+    display: none;  /* Temporary disabled */
     position: absolute;
     width: 150px;
     height: auto;
