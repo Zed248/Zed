@@ -1,7 +1,8 @@
-@import url('https://fonts.googleapis.com/css2?family=Carter+One&family=Cinzel:wght@500&family=Lexend+Deca:wght@300&family=Luckiest+Guy&family=Poppins:wght@300&family=Rouge+Script&family=Yanone+Kaffeesatz&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Carter+One&family=Cinzel:wght@500&family=Lexend+Deca:wght@300&family=Luckiest+Guy&family=Poppins:wght@300&family=Rouge+Script&family=Yanone+Kaffeesatz&display=swap');
 
 /* font 
-1. Luckiest Guy - Blog Title
+0. Archivo Black - blog-title
+1. Luckiest Guy - sub-title
 2. Carter One - link1
 3. Rouge Script - Description1
 4. Yanone Kaffeesatz - Description2;
@@ -18,7 +19,8 @@
 }
 
 :root {
-    --blog_title: 'Luckiest Guy';
+    --blog_title: 'Archivo Black';
+    --blog-sub-title: 'Luckiest Guy';
     --sub-title1: 'Cinzel';
     --sub-title2: 'Carter One';
     --link: 'Poppins';
@@ -27,11 +29,18 @@
     --caption2: 'Yanone Kaffeesatz';
 
     /* main colors */
-    --color1: #4400cb;
-    --color2: #000f4a;
-    --color3: #b1c8db;
-    --color4: #66fcf1;
-    --color5: #eee2dc;
+    --palecolor1: #ACDDDE;
+    --palecolor2: #CAF1DE;
+    --palecolor3: #E1F8DC;
+    --palecolor4: #66fcf1;
+    --palecolor5: #A9D1F7;
+
+    --color1: #cc99ff;
+    --color2: #346ca3;
+    --color3: #650087;
+    --color4: #ffffbf;
+    --color5: #ffffff;
+    --color6: #ffffff00;
 
 
     /* font-size */
@@ -46,20 +55,41 @@ body {
     font-size: var(--default-fontsize);
 }
 
+.wrapper {
+    width: 100%;
+    height: auto;
+    box-sizing: border-box;
+}
+
 .blog-initial {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    margin: 0 3.15rem 0 3.15rem;
 }
 
 .blog-initial h1 {
     width: 100%;
     font-family: var(--blog_title);
+    color: var(--color3);
     letter-spacing: 4px;
     text-align: center;
     font-size: 23pt;
+    text-transform: uppercase;
 }
+
+
+.blog-initial h1::after {
+    position: absolute;
+    content: 'Cod.Œ';
+    font-family: var(--describ);
+    font-size: var(--min-fSize);
+    transform: translate(0, 30px);
+    color: var(--color2);
+}
+
+
 
 .marquee {
     font-family: var(--describ);
@@ -68,6 +98,7 @@ body {
 
 .blog-initial p {
     font-family: var(--caption1);
+    color: var(--color2)
 }
 
 nav {
@@ -80,11 +111,12 @@ nav {
     align-items: flex-start;
 }
 
-nav .nav-tool {
-    width: 100%;
-    height: auto;
+.nav-tool {
+    width: 35%;
+    margin-left: 65%;
+    height: 32px;
     display: flex;
-    justify-content: flex-end;
+    justify-content: space-around;
     align-items: center;
     list-style: none;
     background-color: var(--color3);
@@ -97,24 +129,27 @@ nav .nav-tool {
     transition: all 0.35s ease;
 }
 
-.nav-tool a {
+.nav-tool p {
     position: relative;
-    color: rgba(3, 3, 3, 0.5);
+    color: var(--palecolor4);
     cursor: default;
     padding: 0;
     text-decoration: none;
-    height: 30px;
-    width: 70px;
     font-size: var(--min-fSize);
     font-family: var(--caption2);
     font-weight: bold;
+    height: 25px;
+    width: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .nav-tool a:before,
 .nav-tool a:after {
     position: absolute;
-    height: 28px;
-    width: 28px;
+    height: 12px;
+    width: 12px;
     content: '';
     -webkit-transition: all 0.35s ease;
     transition: all 0.35s ease;
@@ -124,16 +159,16 @@ nav .nav-tool {
 .nav-tool a:before {
     right: 0;
     top: 0;
-    border-right: 1px solid #07d111;
-    border-top: 1px solid #07d111;
+    border-right: 2px solid #07d111;
+    border-top: 2px solid #07d111;
     transform: translate(-100%, 50%);
 }
 
 .nav-tool a:after {
     left: 0;
     bottom: 0;
-    border-left: 1px solid #07d111;
-    border-bottom: 1px solid #07d111;
+    border-left: 2px solid #07d111;
+    border-bottom: 2px solid #07d111;
     transform: translate(100%, -50%);
 }
 
@@ -145,6 +180,17 @@ nav .nav-tool {
 .nav-tool a:hover::after {
     transform: translate(0px, 0px);
     opacity: 1;
+}
+
+.nav-tool .sign-in-btn-show {
+    width: 70px;
+    height: 25px;
+    outline: none;
+    border: none;
+    border-radius: 50px;
+    background-color: var(--color1);
+    text-transform: uppercase;
+    font-family: var(--caption1);
 }
 
 /*----------------*/
@@ -166,17 +212,24 @@ nav a {
     font-family: var(--link);
 }
 
-/* nav a:hover {
+nav a:hover {
     transition: 0.8s;
-    background-color: var(--color4);
+    background-color: var(--color1);
     color: var(--color2);
     height: 50px;
-} */
+}
+
+.dropdown-menu:hover::after {
+    background-color: var(--color1);
+    color: var(--color2);
+    transition: 0.8s;
+}
 
 .dropdown-menu {
+    width: 140px;
+    margin-right: 30px;
     display: flex;
     justify-content: flex-end;
-    padding: 0px 12px 0px 0px;
 }
 
 .dropdown-menu::after {
@@ -188,13 +241,11 @@ nav a {
     justify-content: center;
     align-items: center;
     transform: translateX(100%);
+    font-family: var(--link);
+    
 }
 
-.dropdown-menu:hover::after {
-    background-color: var(--color1);
-    color: var(--color4);
-    transition: 0.8s;
-}
+
 
 .dropdown-list {
     position: absolute;
@@ -202,6 +253,321 @@ nav a {
     height: auto;
     background-color: var(--color3);
     color: var(--color4);
-    transform: translate(79%, 0px);
+    transform: translate(70%, 0px);
 }
 
+/* Log in system Class */
+
+.log-in-model-box-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #07d11163;
+    padding-top: 50pt;
+    z-index: 3;
+}
+
+.msg-box {
+    width: 100%;
+    height: 30px;
+    background-color: red;
+    font-size: 15pt;
+    display: flex;
+    justify-content: center;
+    justify-content: center;
+    z-index: 7;    
+}
+
+.log-in-model-box-container.active {
+    display: none;
+}
+
+.log-in-model-box-container.showagain {
+    display: flex;
+}
+
+.log-in-model-box {
+    width: 80%;
+    height: 80%;
+    background-color: var(--color4);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    z-index: 6;
+    border-radius: 10px;
+}
+
+.account-create-heading {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    height: 60px;
+}
+
+.account-create-heading #close {
+    color: rgb(255, 255, 255);
+    background-color: red;
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    font-size: 20pt;
+}
+
+.account-create-heading #in {
+    color: var(--color2);
+    position: relative;
+    font-size: 13pt;
+    margin-bottom: 25pt;
+    font-weight: bold;
+    height: 60px;
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom-left-radius: 25px;
+    transform: translate(0px, 17px);
+    font-family: var(--sub-title2);
+}
+
+.account-create-heading #up {
+    color: var(--color2);
+    position: relative;
+    font-size: 13pt;
+    margin-bottom: 25pt;
+    font-weight: bold;
+    height: 60px;
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom-right-radius: 25px;
+    transform: translate(0px, 17px);
+    font-family: var(--sub-title2);
+}
+
+.account-create-heading #in:hover,
+.account-create-heading #in.active, 
+.account-create-heading #up:hover,
+.account-create-heading #up.active {
+    background-color: #650087;
+    color: var(--color5);
+    cursor: pointer;
+    font-weight: normal;
+    transition: 0.8s;
+}
+
+#sign-up {
+    margin-top: 12pt;
+    width: 100%;
+    height: auto;
+    background-color: transparent;
+    display: none;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+#sign-up.active {
+    display: flex;
+}
+
+
+
+#sign-in {
+    margin-top: 12pt;
+    width: 100%;
+    height: 100%;
+    display: none;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: transparent;
+    font-family: var(--sub-title1);
+}
+
+#sign-in.active {
+    display:flex;
+}
+
+
+
+.log-in-model-box input {
+    width: 250px;
+    height: 35px;
+    background: var(--color4);
+    color: var(--color3);
+    font-family: var(--link);
+    outline: none;
+    border: none;
+    margin: 13px;
+    padding: 10px;
+    border-bottom: 1px solid gray;
+}
+
+
+#sign-in span.user::before {
+    position: absolute;
+    content: 'Username';
+    width: 100px;
+    height: 30px;
+    color: var(--color2);
+    font-family: var(--caption2);
+    transform: translate(-120px, 5px)
+}
+
+#sign-in span.pass::before {
+    position: absolute;
+    content: 'Password';
+    width: 100px;
+    height: 30px;
+    color: var(--color2);
+    font-family: var(--caption2);
+    transform: translate(-120px, 5px)
+}
+
+#sign-up span.user::before {
+    position: absolute;
+    content: 'Full Name';
+    width: 100px;
+    height: 30px;
+    color: var(--color2);
+    font-family: var(--caption2);
+    transform: translate(-120px, 5px)
+}
+
+#sign-up span.pass::before {
+    position: absolute;
+    content: 'Password';
+    width: 100px;
+    height: 30px;
+    color: var(--color2);
+    font-family: var(--caption2);
+    transform: translate(-120px, 5px)
+}
+
+#sign-up span.email::before {
+    position: absolute;
+    content: 'Email Address';
+    width: 100px;
+    height: 30px;
+    color: var(--color2);
+    font-family: var(--caption2);
+    transform: translate(-120px, 5px)
+}
+
+#sign-up span.set-pass::before {
+    position: absolute;
+    content: 'Set Password';
+    width: 100px;
+    height: 30px;
+    color: var(--color2);
+    font-family: var(--caption2);
+    transform: translate(-120px, 5px)
+}
+
+#sign-up span.confirm-pass::before {
+    position: absolute;
+    content: 'Confirm password';
+    width: 100px;
+    height: 30px;
+    color: var(--color2);
+    font-family: var(--caption2);
+    transform: translate(-120px, 5px)
+}
+
+#sign-in p {
+    font-family: var(--caption1);
+    text-decoration: none;
+    width: 100%;
+    margin-bottom: 23pt;
+}
+
+.tem-line-sign-in input {
+    width: 10px;
+    height: 10px;
+}
+
+.tem-line-sign-in span {
+    font-family: var(--caption1);
+    font-size: var(--default-fontsize);
+}
+
+.term-condition {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    width: 100%;
+    text-align: justify;
+}
+
+.term-condition input {
+    width: 10px;
+    height: 10px;
+}
+
+.term-condition span {
+    font-family: var(--caption1);
+    text-align: justify;
+    margin-bottom: 8pt;
+}
+
+.tem-line span a {
+    font-family: var(--caption1);
+    font-size: var(--default-fontsize);
+    text-decoration: none;
+}
+
+#sign-in #sign-in-btn, #sign-up #sign-up-btn {
+    width: 120px;
+    height: 35px;
+    border: none;
+    outline: none;
+    background-color: var(--palecolor4);
+    font-family: var(--sub-title2);
+    border-radius: 12px;
+}
+
+#sign-in #sign-in-btn:hover, #sign-up #sign-up-btn:hover {
+    background-color: var(--color3);
+    color: var(--color5);
+    transition: 0.8s;
+}
+
+#sign-in-icons, #sign-up-icons {
+    display: flex;
+    margin-top: 22pt;
+}
+
+.or-sign-up {
+    margin-top: 23pt;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: var(--caption2);
+}
+
+.or-sign-up .sign-up-link-btn {
+    width: 100px;
+    margin-top: 12pt;
+    height: 35px;
+    border-top: 2px solid var(--color1);
+    border-bottom: 2px solid var(--color1);
+    outline: none;
+    border-left: none;
+    border-right: none;
+    cursor: pointer;
+}
+
+
+
+
+
+/* End log in system here */
