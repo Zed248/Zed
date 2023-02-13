@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link type="text/css" rel="stylesheet" href="../res/rec.css">
+    <!-- <script type="text/JavaScript" src="../res/rec.js"></script> -->
+    <script type="text/JavaScript">
+        var header = document.getElementById("myDIV");
+var btns = header.getElementsByClassName("btn");
+for (var i = 0; i < btns.length; i++) {
+  btns[i].addEventListener("click", function() {
+  var current = document.getElementsByClassName("active");
+  current[0].className = current[0].className.replace(" active", "");
+  this.className += " active";
+  });
+}
+    </script>
+</head>
+
+<body>
+    <div class="wrapper">
+        <h3>CSS3 Fundamental</h3>
+        <div class="main-container">
+            <div class="side-bar" id="myDIV">
+                <a href="#display" class="btn active">Display</a>
+                <a href="#color" class="btn">Color</a>
+                <a href="#padding" class="btn">Padding</a>
+            </div>
+
+
+            <section>
+                <div id="display">
+                    <h4>Display Class</h4>
+                    <p>Here are some example for you!</p>
+                    <div class="controllers">
+                        <button class="flex-center">Flex Center</button>
+                        <button class="flex-start">Flex Start</button>
+                        <button class="flex-row">Flex Row</button>
+                        <button class="flex-column">Flex Column</button>
+                    </div>
+                    <textarea class="display-code"></textarea>
+                    <div class="model-box-container">
+                        <div class="display-model-box"></div>
+                    </div>
+                </div>
+                <div id="color">
+                    <h4>Color Patterns</h4>
+                    <p>Here are some color example for you!</p>
+                    <div class="controllers">
+                        <div class="color1"></div>
+                        <div class="color2"></div>
+                        <div class="color3"></div>
+                        <div class="color4"></div>
+                        <div class="color5"></div>
+                        <div class="color6"></div>
+                        <div class="color7"></div>
+                        <div class="color8"></div>
+                        <div class="color9"></div>
+                        <div class="color10"></div>
+                        <div class="color11"></div>
+                        <div class="color12"></div>
+                        <div class="color13"></div>
+                        <div class="color14"></div>
+                        <div class="color15"></div>
+                        <div class="color16"></div>
+                        <div class="color17"></div>
+                        <div class="color18"></div>
+                        <div class="color19"></div>
+                        <div class="color20"></div>
+                        <div class="color21"></div>
+                        <div class="color22"></div>
+                        <div class="color23"></div>
+                        <div class="color24"></div>
+                        <div class="color25"></div>
+                        <div class="color26"></div>
+                        <div class="color27"></div>
+                        <div class="color28"></div>
+                        <div class="color29"></div>
+                        <div class="color30"></div>
+                        <div class="color31"></div>
+                        <div class="color32"></div>
+                        <div class="color33"></div>
+                        <div class="color34"></div>
+                        <div class="color35"></div>
+                        <div class="color36"></div>
+                        <div class="color37"></div>
+                        <div class="color38"></div>
+                        <div class="color39"></div>
+                        <div class="color40"></div>
+
+                    </div>
+                    <textarea class="color-code"></textarea>
+                    <div class="model-box-container">
+
+                    </div>
+                </div>
+                <div id="padding">
+                    <h4>Padding</h4>
+                    <p>Here are some color example for you!</p>
+                    <div class="controllers">
+
+                    </div>
+                    <textarea class="color-code"></textarea>
+                    <div class="model-box-container">
+
+                    </div>
+                </div>
+            </section>
+        </div>
+
+    </div>
+
+</body>
+
+
+</html>
