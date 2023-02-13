@@ -40,7 +40,7 @@ logInButton.addEventListener('click', () => {
     //username checker
     if (logInUserName == getLogInUserName && logInPassword == getLogInPassword && checkBox1.checked == true) {
         msgBox.innerHTML = "User Name : " + getLogInUserName + "| Password : " + getLogInPassword;
-        logInModelBox.style.display = "none";
+        logInModelBox.classList.add('active');
         logInNavToolCaller.innerHTML = "Admin Account";
         logInNavToolCaller.style.cssText = "background-color: green; color: white";
         msgBox.classList.add('active');
@@ -48,7 +48,7 @@ logInButton.addEventListener('click', () => {
         console.log("click log-in true");
     } else {
         msgBox.innerHTML = "Wrong Entry Information! Try again!";
-        logInModelBox.style.display = "flex";
+        logInModelBox.classList.remove('active');
         alert("You need to agree our pravicy policies");
         location.reload();
         console.log("click log-in but wrong")
