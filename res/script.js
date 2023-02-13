@@ -81,15 +81,34 @@ signUpNavigatorForSignIn.addEventListener('click', () => {
 //Hamburger Btn action
 const hamburger = document.querySelector('.hamburger');
 const hamBtn = document.querySelector('.hamburger-btn');
+const nav_link = document.querySelector('.link');
+const nav = document.querySelector('nav')
 
 let menuOpen = false;
 
 hamburger.addEventListener('click', () => {
     if (!menuOpen) {
         hamBtn.classList.add('active');
+        nav_link.classList.add('active');
         menuOpen = true;
     } else {
         hamBtn.classList.remove('active');
+        nav_link.classList.remove('active');
         menuOpen = false;
     }
 })
+
+//Top bar sticky
+
+window.onscroll = function() {myFunction()};
+
+
+var sticky = nav.offsetTop;
+
+function myFunction() {
+  if (window.pageYOffset >= sticky) {
+    nav.classList.add("sticky")
+  } else {
+    nav.classList.remove("sticky");
+  }
+}

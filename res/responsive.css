@@ -4,7 +4,7 @@
     --sub-title1: 'Cinzel';
     --sub-title2: 'Carter One';
     --link: 'Poppins';
-    --describ: 'Rouge Script';   
+    --describ: 'Rouge Script';
     --caption1: 'Lexend Deca';
     --caption2: 'Yanone Kaffeesatz';
 
@@ -28,24 +28,28 @@
     --desc-font-size: 13pt;
     --default-fontsize: 10pt;
     --min-fSize: 8pt;
-   
+
 }
 
 
-@media screen and (max-width: 640px ) {
+@media screen and (max-width: 640px) {
     .blog-initial {
         width: 100%;
         margin: 0px;
     }
 
+    .blog-initial h1::after {
+        margin-bottom: 12pt;
+    }
+
+    .blog-initial p {
+        text-align: center;
+        font-size: 9pt;
+    }
+
     .nav-tool {
         width: 100%;
-        height: auto;
-        margin: 0px;
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: flex-start;
-        border-radius: 0px;
+        margin-left: 0;
     }
 
     .nav-tool p {
@@ -59,63 +63,9 @@
         margin-bottom: 5px;
     }
 
-    .hamburger {
-        width: 30px;
-        height: 30px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        margin-left: 25pt;
-    }
-    
-    .hamburger-btn {
-        width: 25px;
-        height: 2px;
-        border-radius: 15px;
-        background-color: var(--color5);
-        transition: 0.5s;
-        z-index: 5;
-    }
 
-    .hamburger-btn::before {
-        position: absolute;
-        content: '';
-        width: 15px;
-        height: 2px;
-        border-radius: 15px;
-        background-color: var(--color5);
-        transform: translateY(-7px);
-        transition: 0.5s;
-    }
 
-    .hamburger-btn::after {
-        position: absolute;
-        content: '';
-        width: 15px;
-        height: 2px;
-        border-radius: 15px;
-        background-color: var(--color5);
-        transform: translate(10px, 7px);
-        transition: 0.5s;
-    }
-
-    .hamburger-btn.active {
-        background-color: var(--red);
-        transform: rotate(-45deg);
-        transition: 0.5s;
-    }
-
-    .hamburger-btn.active::before {
-        transform: translate(5px, -6px) rotate(90deg);
-        background-color: var(--red);
-        transition: 0.5s;
-    }
-
-    .hamburger-btn.active::after {
-        transform: translate(5px, 5px) rotate(90deg);
-        background-color: var(--red);
-        transition: 0.5s;
-    }
+    /* log in model box start here for responsive */
 
 
     .log-in-model-box-container {
@@ -128,9 +78,11 @@
     }
 
     nav {
-        position: absolute;
-        top: -5px;
-        overflow: hidden;
+        width: 100%;
+        height: 50px;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
     }
 
     nav .link {
@@ -139,8 +91,13 @@
         justify-content: space-around;
         align-items: center;
         width: 100%;
-        height: 0px;
+        height: 0vh;
         overflow: hidden;
+        transition: 0.5s;
+        background-color: var(--color3);
+        position: fixed;
+        top: 0;
+        z-index: 5;
     }
 
     nav .link.active {
@@ -148,16 +105,36 @@
         transition: 0.5s;
     }
 
+    .hamburger {
+        position: absolute;
+        display: flex;
+        z-index: 6;
+    }
+
     .link a {
         width: 100%;
+        margin: 0;
+        padding: 0;
     }
 
     .dropdown-menu::after {
-        display: none;
+        display: flex;
     }
 
     .dropdown-list {
-        display: none;
+        width: 130px;
+        height: 300px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        transform: translate(20, -30pt);
+        border-radius: 14px;
+    }
+
+    .dropdown-list a {
+        height: 40px;
+        padding-left: 10px;
     }
 
     .ft-documentations span {
@@ -173,5 +150,114 @@
         padding: 0 0 0 12px;
     }
 
-    .
+    /* ------------------------ Home ----------------------*/
+
+    .blog-intro-bg-img-container {
+        width: 100%;
+        height: 500px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        user-select: none;
+    }
+
+    .img-box-cover {
+        width: 100%;
+        height: 300px;
+        background-color: transparent;
+        background-position: center;
+        background-size: cover;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+        z-index: 1;
+    }
+
+    .img-box-cover:hover img {
+        transform: scale(1.2);
+    }
+
+    .img-box-cover img {
+        width: 100%;
+        display: block;
+        transition: transform 2s;
+        z-index: 0;
+    }
+
+
+    .img-box-cover h1 {
+        font-family: var(--blog_title);
+        color: var(--color5);
+        font-size: 50pt;
+        text-shadow: 1px 1px 13px salmon;
+        position: absolute;
+        transform: translateY(-25px);
+        z-index: 1;
+    }
+
+    .img-box-cover p {
+        font-family: var(--caption1);
+        color: var(--color5);
+        text-shadow: 1px 1px 13px salmon;
+        position: absolute;
+        transform: translateY(25px);
+        z-index: 1;
+    }
+
+    .category-container {
+        width: 100%;
+    }
+
+    .category {
+        width: 90%;
+    }
+
+    .computer-showcase {
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .computer-img {
+        width: 100%;
+        height: 400px;
+        height: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        /*border: 1px solid red;*/
+    }
+
+    .computer-img img {
+        width: 300px;
+        height: auto;
+        background-color: transparent;
+    }
+
+    .computer-label {
+        width: 100%;
+        height: 300px;
+        margin: 0;
+        padding: 0;
+        /*border: 1px solid red;*/
+    }
+
+    .computer-label li {
+        width: 300px;
+        height: auto;
+        font-family: var(--caption1);
+        padding: 15px;
+        transform: translateX(0px);
+    }
+
+    .invite .btn {
+        margin-top: 22pt;
+    }
+
+
 }
