@@ -29,6 +29,8 @@ var logInButton = document.querySelector('#sign-in-btn');
 
 //msgBox
 var msgBox = document.querySelector('.msg-box');
+var checkBox1 = document.querySelector('.agree-checkbox-sign-in');
+
 //Sign in Validation
 logInButton.addEventListener('click', () => {
 
@@ -36,18 +38,19 @@ logInButton.addEventListener('click', () => {
     let getLogInPassword = logInPasswordInput.value;
 
     //username checker
-    if (logInUserName == getLogInUserName && logInPassword == getLogInPassword) {
+    if (logInUserName == getLogInUserName && logInPassword == getLogInPassword && checkBox1.checked == true) {
         msgBox.innerHTML = "User Name : " + getLogInUserName + "| Password : " + getLogInPassword;
         logInModelBox.style.display = "none";
         logInNavToolCaller.innerHTML = "Admin Account";
         logInNavToolCaller.style.cssText = "background-color: green; color: white";
         msgBox.classList.add('active');
         alert("You have access Admin User Account!" + " Username: " + logInUserName + "| Password: " + logInPassword + "! You can enjoy using our blog. Thanks!")
-        console.log("click log-in true")
+        console.log("click log-in true");
     } else {
         msgBox.innerHTML = "Wrong Entry Information! Try again!";
         logInModelBox.style.display = "flex";
-        // location.reload();
+        alert("You need to agree our pravicy policies");
+        location.reload();
         console.log("click log-in but wrong")
     }
 })
@@ -82,7 +85,7 @@ const hamBtn = document.querySelector('.hamburger-btn');
 let menuOpen = false;
 
 hamburger.addEventListener('click', () => {
-    if(!menuOpen) {
+    if (!menuOpen) {
         hamBtn.classList.add('active');
         menuOpen = true;
     } else {

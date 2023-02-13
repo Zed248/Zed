@@ -32,11 +32,12 @@
     --palecolor5: #A9D1F7;
 
     --color1: #cc99ff;
-    --color2: #346ca3;
+    --color2: #054c5c;
     --color3: #650087;
     --color4: #16f358;
     --color5: #ffffff;
     --color6: #000000;
+    --red: red;
 
 
     /* font-size */
@@ -288,18 +289,39 @@ nav .link {
 /* ----------------------------- Log in system Class ----------------------*/
 
 .log-in-model-box-container {
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
-    height: auto;
+    height: 80vh;
     display: flex; /*temporary disable log in page for edition*/
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     background-color: #07d11163;
     padding-top: 50pt;
     z-index: 3;
     animation: fatein 1s;
+}
+
+.log-in-model-box-container p {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 23pt;
+    width: 90%;
+    border-radius: 15px;
+    height: 80px;
+    background-color: var(--color1);
+    color: var(--red);
+    font-size: 9pt;
+    font-family: var(--sub-title2);
+    text-shadow: 1px 1px 1px white;
+}
+
+.log-in-model-box-container span {
+    color: var(--color4);
+    margin-left: 6px;
 }
 
 @keyframes fatein {
