@@ -112,3 +112,18 @@ function myFunction() {
     nav.classList.remove("sticky");
   }
 }
+
+
+var dropDownBtn = document.querySelector('.dropdown-menu');
+var dropDownList = document.querySelector('.dropdown-list');
+
+dropDownBtn.addEventListener('click', () => {
+    if(!menuOpen) {
+        dropDownList.classList.add('show');
+        menuOpen = true;
+        console.log("Click menu")
+    } else {
+        dropDownList.classList.remove('show');
+        menuOpen = false;
+    }
+})

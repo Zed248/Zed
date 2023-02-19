@@ -338,13 +338,23 @@ nav .link {
 
 
 .dropdown-list {
-    display: none;  /* Temporary disabled */
+    display: flex;  /* Temporary disabled */
+    flex-direction: column;
     position: absolute;
     width: 150px;
-    height: auto;
+    height: 0px;
     background-color: var(--color3);
     color: var(--color4);
     transform: translate(150px, 0px);
+    opacity: 0;
+    z-index: 5;
+
+}
+
+.dropdown-list.show {
+    transition: 0.5s;
+    opacity: 1;
+    height: 150px;
 }
 
 .dropdown-list a {
