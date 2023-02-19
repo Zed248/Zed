@@ -375,7 +375,7 @@ nav .link {
     left: 0;
     width: 100vw;
     height: 100vh;
-    display: none; /*temporary disable log in page for edition*/
+    display: flex; /*temporary disable log in page for edition*/
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
