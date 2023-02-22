@@ -1,4 +1,8 @@
 /* This is license to Rakkha Lin Maung */
+
+
+
+
     var r = document.querySelector('.redc');
     var g = document.querySelector('.greenc');
     var b = document.querySelector('.bluec');
