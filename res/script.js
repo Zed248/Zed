@@ -56,33 +56,12 @@ logInButton.addEventListener('click', () => {
 })
 
 
-//open ModelBox Back
-var signUpNavigatorForSignIn = document.querySelector('#sign-up-navigator');
-var closeLogInModelBtn = document.querySelector('#close');
-var logInNavToolCaller = document.querySelector('.sign-in-btn-show');
-
-logInNavToolCaller.addEventListener('click', () => {
-    logInModelBox.style.display = "flex";
-})
-
-closeLogInModelBtn.addEventListener('click', () => {
-    logInModelBox.style.display = "none";
-})
-
-signUpNavigatorForSignIn.addEventListener('click', () => {
-    signUpSection.classList.add('active');
-    signInSection.classList.remove('active');
-    signUpSectionHeading.classList.add('active');
-    signInSectionHeading.classList.remove('active');
-})
-
 
 
 //Hamburger Btn action
 const hamburger = document.querySelector('.hamburger');
 const hamBtn = document.querySelector('.hamburger-btn');
-const nav_link = document.querySelector('.link');
-const nav = document.querySelector('nav')
+const nav_link = document.querySelector('.side-bar');
 
 let menuOpen = false;
 
@@ -101,7 +80,7 @@ hamburger.addEventListener('click', () => {
 //Top bar sticky
 
 window.onscroll = function() {myFunction()};
-
+var nav = document.querySelector('.side-bar');
 
 var sticky = nav.offsetTop;
 
@@ -113,17 +92,3 @@ function myFunction() {
   }
 }
 
-
-var dropDownBtn = document.querySelector('.dropdown-menu');
-var dropDownList = document.querySelector('.dropdown-list');
-
-dropDownBtn.addEventListener('click', () => {
-    if(!menuOpen) {
-        dropDownList.classList.add('show');
-        menuOpen = true;
-        console.log("Click menu")
-    } else {
-        dropDownList.classList.remove('show');
-        menuOpen = false;
-    }
-})
