@@ -54,6 +54,8 @@ body {
 .wrapper {
     margin: 0;
     padding: 0;
+    width: 100%;
+    padding-left: 260px;
 }
 
 .log-in-model-box-container {
@@ -77,16 +79,13 @@ body {
 }
 
 .blog-initial {
-    width: 90%;
+    width: 100%;
     height: 100px;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-    width: 100%;
-    height: 100px;
     background-color: var(--blog-primary-color);
-    margin-left: 150px;
 }
 
 .blog-initial h1 {
@@ -160,7 +159,7 @@ body {
 }
 
 section {
-    margin-left: 260px;
+    width: 100%;
     margin-top: 100px;
 }
 
@@ -169,7 +168,6 @@ footer {
     background-color: var(--blog-primary-color);
     border-top: 3px solid var(--pure-white);
     width: 100%;
-    margin-left: 260px;
 }
 
 .footer-top-bar {

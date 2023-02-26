@@ -26,6 +26,10 @@
 
 
 @media screen and (max-width: 740px) {
+
+    .wrapper {
+        padding: 0;
+    }
    
     .side-bar {
         position: fixed;
