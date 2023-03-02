@@ -10,6 +10,7 @@
     <link rel="stylesheet" type="text/css" href="res/main.css">
     <link rel="stylesheet" type="text/css" href="res/section.css">
     <link rel="stylesheet" type="text/css" href="res/responsive.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 </head>
 
 <body>
@@ -81,63 +82,65 @@
             </div>
         </div>
 
-        <div class="hamburger">
-            <div class="hamburger-btn"></div>
-        </div>
-
-        <div class="blog-initial">
-            <h1>Zed</h1>
-            <p>You can do everything you want, It's legally release! Ha Ha Ha</p>
-            <marquee class="marquee">Download free software, [Photoshop, Design Tools], [Coding Software], [More
-                tools]
-            </marquee>
-        </div>
-
-        <nav class="side-bar">
-            <div class="link">
-                <ul>
-                    <li class="parent"><a href="#">Initialize</a>
+        <div class="nav-container">
+            <nav class="link">
+                <ul class="link-holder">
+                    <li class="logo-and-text">
+                        <a href="" class="active">
+                            <i class="fas fa-home"></i>
+                            <span class="nav-item">Home</span>
+                        </a>
+                    </li>
+                    <li class="logo-and-text">
+                        <a href="">
+                            <i class="fas fa-code"></i>
+                    <li class="parent">
+                        <a href="#" class="nav-item">Web Dev</a>
                         <ul class="child">
-                            <li class="parent">
-                                <a href="#">PC Downloads<span class="expand"></span></a>
-                                <ul class="child">
-                                    <li><a href="./pages/software.html">Software</a></li>
-                                    <li><a href="./pages/cmdlabs.html">CMD Lab</a></li>
-                                    <li><a href="./pages/winfix.html">Tools & Techniques</a></li>
-                                </ul>
-                            </li>
-                            <li class="parent">
-                                <a href="#">Web<span class="expand"></span></a>
-                                <ul class="child">
-                                    <li><a href="#">HTML5</a></li>
-                                    <li><a href="./pages/css3.html">CSS3</a></li>
-                                    <li><a href="#">JavaScript</a></li>
-                                </ul>
-                            </li>
-                            <li class="parent">
-                                <a href="#">Creating....<span class="expand"></span></a>
-                                <ul class="child">
-                                    <li><a href="#">Comming Soon ....</a></li>
-                                    <li><a href="#">Comming Soon ....</a></li>
-                                    <li><a href="#">Comming Soon ....</a></li>
-                                    <li><a href="#">Comming Soon ....</a></li>
-                                    <li><a href="#">Comming Soon ....</a></li>
-                                </ul>
-                            </li>
+                            <li><a href="./pages/software.html">HTML</a></li>
+                            <li><a href="./pages/cmdlabs.html">CSS</a></li>
+                            <li><a href="./pages/winfix.html">JavaScript</a></li>
                         </ul>
                     </li>
+                    </a>
+                    </li>
+                    <li class="logo-and-text">
+                        <a href="">
+                            <i class="fas fa-user"></i>
+                            <span class="nav-item">About</span>
+                        </a>
+                    </li>
+                    <li class="logo-and-text">
+                        <a href="">
+                            <i class="fas fa-shapes"></i>
+                            <span class="nav-item">Photoshop</span>
+                        </a>
+                    </li>
+
+                    <li class="logo-and-text">
+                        <a href="">
+                            <i class="fas fa-ghost"></i>
+                            <span class="nav-item">Software Download</span>
+                        </a>
+                    </li>
+
+                    <li class="logo-and-text">
+                        <a href="">
+                            <i class="fas fa-tv"></i>
+                            <span class="nav-item">YouTube</span>
+                        </a>
+                    </li>
+
                 </ul>
-                <a href='' class="active">Home</a>
-                <a href='./pages/aboutus.html'>My Profile</a>
-                <a class="login-btn" onclick="document.getElementById('login-form').style.display='flex'">Login</a>
-            </div>
-        </nav>
+            </nav>
+        </div>
         <section>
             <div class="blog-intro-bg-img-container">
                 <div class="img-box-cover">
                     <h1>Zed Blog</h1>
                     <p>Essential Tools & Application free Download Center and one plus learning center</p>
                     <img src="./img/sunset.jpg">
+                    <div class="scroll-down"></div>
                 </div>
             </div>
             <div class="portfolio-showcase">
@@ -150,6 +153,25 @@
                     <img src="./img/desktop.png">
                 </div>
             </div>
+
+            <div class="card-container">
+                <h2>Create beautiful Portfolio IMG Container Showcase using CSS</h2>
+                <p>Makeup your webpage with below images boxes. It will make your Website for better apperance. Put your mouse on images it will make blur!</p>
+                <div class="card-grid">
+
+                    <div class="card">
+                        <img class="card-background" src="./img/1.jpg">
+                    </div>
+                    <div class="card">
+                        <img class="card-background" src="./img/2.jpg">
+                    </div>
+                    <div class="card">
+                        <img class="card-background" src="./img/3.jpg">
+                    </div>
+                </div>
+            </div>
+
+
             <div class="category-container">
                 <div class="category">
                     <h3>Categories</h3>
