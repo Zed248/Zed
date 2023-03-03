@@ -144,6 +144,7 @@ body {
     color: var(--hover-color);
 }
 
+
 .link:hover {
     width: 250px;
     transition: all 0.5s ease;
