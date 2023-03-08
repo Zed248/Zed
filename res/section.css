@@ -607,6 +607,7 @@
 	justify-content: center;
 	align-items: center;
 	color: var(--black);
+	font-family: var(--caption2);
 }
 
 .software-download-show-case p {
@@ -622,10 +623,15 @@
 .d-list {
 	width: 400px;
 	background-color: var(--blog-main-color);
-	font-family: var(--link);
+	font-family: var(--caption1);
 	font-size: var(--des-fontsize);
 	outline: none;
 	border: none;
+}
+
+.d-list:hover {
+	box-shadow: 1px 3px 15px var(--hover-color);
+	transition: 0.3s;
 }
 
 .d-list option[value] {
@@ -657,4 +663,16 @@
 	border-radius: 3px;
 	outline: none;
 	border: none;
+	background-color: var(--blog-main-color);
+	box-shadow: 1px 3px 15px rgba(71, 2, 68, 0.212);
+	font-family: var(--sub-title2);
+	letter-spacing: 0px;
+	transition: 0.5s;
+}
+
+#get_link:hover {
+	box-shadow: 1px 3px 15px var(--hover-color);
+	color: var(--hover-color);
+	transition: 0.2s;
+	letter-spacing: 2px;
 }
