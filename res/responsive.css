@@ -1,9 +1,8 @@
+/* -------------- Copyright of Rakkha's Design 2022 --------- */
 :root {
     --blog_title: 'Archivo Black';
-    --blog-sub-title: 'Luckiest Guy';
-    --sub-title1: 'Cinzel';
-    --sub-title2: 'Carter One';
-    --link: 'Poppins';
+    --sub-title: 'Carter One';
+    --primary-style: 'Poppins';
     --describ: 'Rouge Script';
     --caption1: 'Lexend Deca';
     --caption2: 'Yanone Kaffeesatz';
@@ -12,17 +11,17 @@
     --blog-primary-color: rgba(76, 76, 76, 0.785);
     --hover-color: #06ffff;
     --pure-white: #ffffff;
-    --gray: #000000;
-
+    --black: #000000;
+    --gray: gray;
 
 
     /* font-size */
-    --desc-font-size: 13pt;
-    --default-fontsize: 10pt;
-    --min-fSize: 8pt;
+    --blog-title-size: 23pt;
+    --post-title-size: 13pt;
+    --primary-Size: 11pt;
+    --min-Size: 9pt;
 
 }
-
 
 @media screen and (max-width: 740px) {
 
@@ -37,11 +36,13 @@
 
     section {
         width: auto;
+        padding: 1em;
     }
 
 
     footer {
         margin: 0;
+        padding: 1em;
     }
 
 
@@ -108,6 +109,7 @@
 
     .portfolio-showcase {
         height: 300px;
+        padding: 1em;
     }
 
     .port-content {
@@ -120,8 +122,15 @@
         height: auto;
     }
 
+    .port-img {
+        width: 50%;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+    }
+
     .port-img img{
-        width: 300px;
+        width: 200px;
     }
 
     .category-container {

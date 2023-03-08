@@ -24,9 +24,6 @@
     --desc-font-size: 13pt;
     --default-fontsize: 10pt;
     --min-fSize: 8pt;
-
-	
-   
 }
 
 
@@ -590,14 +587,15 @@
 
 .software-download-show-case {
 	width: 100%;
-	height: 500px;
+	height: auto;
 	display: flex;
 	flex-direction: column;
 	justify-content: flex-start;
 	align-items: center;
-	margin: 2em;
+	padding: 2em;
 	box-shadow: 1px 3px 15px rgba(223, 212, 222, 0.212);
 	font-family: var(--link);
+	background-color: var(--blog-main-color);
 }
 
 .software-download-show-case h1 {
@@ -608,6 +606,8 @@
 	align-items: center;
 	color: var(--black);
 	font-family: var(--caption2);
+	letter-spacing: 3px;
+	text-transform: uppercase;
 }
 
 .software-download-show-case p {
@@ -616,12 +616,13 @@
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	color: var(--black);
+	color: var(--hover-color);
 	font-size: var(--default-fontsize);
 }
 
 .d-list {
 	width: 400px;
+	height: 40px;
 	background-color: var(--blog-main-color);
 	font-family: var(--caption1);
 	font-size: var(--des-fontsize);
@@ -635,7 +636,8 @@
 }
 
 .d-list option[value] {
-	background-color: gray;
+	background-color: rgba(14, 13, 13, 0.555);
+	font-size: var(--default-fontsize);
 }
 
 ::selection {
@@ -649,13 +651,34 @@
 
 #soft_descri {
 	width: 100%;
-	height: 200px;
+	height: auto;
 	display: flex;
 	justify-content: flex-start;
 	align-items: flex-start;
 	text-align: justify;
 	padding: 2em;
 }
+
+.image-container {
+	background-color: var(--pure-white);
+	width: 60%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-top: 1em;
+	margin-bottom: 1em;
+	padding-top: 3em;
+	padding-bottom: 3em;
+	border-radius: 30px;
+	box-shadow: inset 1px 3px 15px rgb(14, 13, 13);
+	border: 1px solid rgba(14, 13, 13, 0.747);
+}
+
+#soft_img {
+	width: 300px;
+}
+
+
 
 #get_link {
 	width: 150px;
@@ -668,6 +691,11 @@
 	font-family: var(--sub-title2);
 	letter-spacing: 0px;
 	transition: 0.5s;
+	text-decoration: none;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: var(--black);
 }
 
 #get_link:hover {
@@ -675,4 +703,250 @@
 	color: var(--hover-color);
 	transition: 0.2s;
 	letter-spacing: 2px;
+	cursor: pointer;
+}
+
+
+/* ----------------------- About or My Profile ------------------- */
+
+.profile-container {
+	width: 100%;
+	height: auto;
+	display: flex;
+	justify-content: center;
+	align-items: flex-start;
+	padding-top: 4em;
+	padding-bottom: 4em;
+}
+
+.profile-showcase {
+	width: 80%;
+	height: auto;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items: center;
+	box-shadow: 1px 5px 15px hsla(310, 100%, 32%, 0.555);
+	border-radius: 15px;
+}
+
+.profile-showcase::before {
+	position: relative;
+	content: '';
+	width: 100%;
+	height: 100px;
+	background-image: url('../img/profile-bg.jpg');
+	background-position: center;
+	background-size: cover;
+}
+
+.profile-showcase::after {
+	position: absolute;
+	content: '';
+	width: 160px;
+	height: 160px;
+	border-radius: 50%;
+	transform: translateY(17px);
+	border: 3px solid var(--hover-color);
+}
+
+.profile-showcase img {
+	position: absolute;
+	width: 150px;
+	border-radius: 50%;
+	margin-top: 25px;
+	z-index: 3;
+}
+
+.profile-name {
+	width: 100%;
+	margin-top: 5.5em;
+	text-align: center;
+	font-family: var(--sub-title2);
+	text-transform: uppercase;
+	letter-spacing: 1px;
+}
+
+.profile-name::after {
+	position: absolute;
+	content: "DEV";
+	font-size: 7pt;
+	font-family: var(--link);
+	background-color: #56009c;
+	width: 40px;
+	height: 15px;
+	transform: translateY(-5px);
+	margin-left: 1px;
+	border-radius: 5px;
+}
+
+.profile-location {
+	width: 100%;
+	text-align: center;
+	font-family: var(--link);
+	text-transform: capitalize;
+	letter-spacing: 1px;
+	font-size: var(--default-fontsize);
+	color: black;
+	margin-top: 1em;
+}
+
+.profile-location i {
+	font-size: 20px;
+	margin-right: 10px;
+	color: black;
+	transform: translateY(2px)
+}
+
+.profile-caption {
+	width: 100%;
+	text-align: justify;
+	font-family: var(--link);
+	text-transform: capitalize;
+	font-size: var(--default-fontsize);
+	padding: 1em 3em 1em 3em;
+	line-height: 25px;
+	margin-bottom: 1em;
+	color: var(--black);
+}
+
+
+.profile-contact {
+	width: 80%;
+	height: 70px;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	margin-bottom: 1em;
+	margin-left: 3em;
+	margin-right: 3em;
+}
+
+.profile-contact::before { /*Heading for Svg */
+	position: absolute;
+	content: 'Socials';
+	width: 100px;
+	text-align: center;
+	font-family: var(--caption1);
+	transform: translate(0px, -40px);
+	background-color: black;
+	border-radius: 13px;
+	z-index: 2;
+}
+
+.profile-contact::after {
+	position: absolute;
+	content: '';
+	width: 50%;
+	height: 1px;
+	background-color: black;
+	transform: translate(0px, -40px);
+	z-index: 1;
+}
+
+.profile-contact i {
+	width: 30px;
+	text-decoration: none;
+	color: black;
+}
+
+.profile-contact i:hover {
+	transition: 0.5s;
+	color: var(--hover-color);
+	cursor: pointer;
+}
+
+.email-contact {
+	width: 100%;
+	height: 70px;
+	padding-bottom: 2em;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.email-me {
+	width: 150px;
+	height: 50px;
+	background-color: var(--color1);
+	outline: none;
+	border: none;
+	border-radius: 2px;
+	color: var(--pure-white);
+	font-family: var(--link);
+	margin-right: 1em;
+}
+
+.email-me:hover {
+	transition: 0.5s;
+	background-color: black;
+	color: var(--hover-color);
+}
+
+.email-contact a {
+	width: 150px;
+	height: 50px;
+	background-color: var(--color1);
+	outline: none;
+	border: none;
+	border-radius: 2px;
+	color: var(--pure-white);
+	font-family: var(--link);
+	text-decoration: none;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: var(--default-fontsize);
+}
+
+.email-contact a:hover {
+	transition: 0.5s;
+	background-color: black;
+	color: var(--hover-color);
+}
+
+
+/* ---------------------- Photoshop Tags ------------------- */
+
+.ps-lesson-main-container {
+	width: 100%;
+	height: auto;
+	padding-right: 12pt;
+	padding-left: 12pt;
+}
+
+.ps-lesson-container {
+	width: 100%;
+	height: auto;
+	box-shadow: 1px 4px 15px rgba(71, 2, 68, 0.212);
+	padding: 2em 1em 2em 1em;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items: center;
+}
+
+.ps-lesson-heading {
+	font-family: var(--caption1);
+	font-weight: normal;
+	width: 100%;
+	justify-content: flex-start;
+}
+
+.ps-lesson-caption {
+	font-family: var(--caption1);
+	font-size: var(--default-fontsize);
+	text-align: justify;
+	padding-top: 2em;
+	padding-bottom: 2em;
+}
+
+.ps-lesson-caption a {
+	text-decoration: none;
+	color: #06ffff;
+}
+
+.ps-lesson-container iframe {
+	width: 80%;
+	height: 400px;
 }

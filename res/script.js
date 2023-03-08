@@ -58,37 +58,37 @@ logInButton.addEventListener('click', () => {
 
 
 
-//Hamburger Btn action
-const hamburger = document.querySelector('.hamburger');
-const hamBtn = document.querySelector('.hamburger-btn');
-const nav_link = document.querySelector('.side-bar');
+// //Hamburger Btn action
+// const hamburger = document.querySelector('.hamburger');
+// const hamBtn = document.querySelector('.hamburger-btn');
+// const nav_link = document.querySelector('.side-bar');
 
-let menuOpen = false;
+// let menuOpen = false;
 
-hamburger.addEventListener('click', () => {
-    if (!menuOpen) {
-        hamBtn.classList.add('active');
-        nav_link.classList.add('active');
-        menuOpen = true;
-    } else {
-        hamBtn.classList.remove('active');
-        nav_link.classList.remove('active');
-        menuOpen = false;
-    }
-})
+// hamburger.addEventListener('click', () => {
+//     if (!menuOpen) {
+//         hamBtn.classList.add('active');
+//         nav_link.classList.add('active');
+//         menuOpen = true;
+//     } else {
+//         hamBtn.classList.remove('active');
+//         nav_link.classList.remove('active');
+//         menuOpen = false;
+//     }
+// })
 
 //Top bar sticky
 
-window.onscroll = function() {myFunction()};
-var nav = document.querySelector('.side-bar');
+// window.onscroll = function() {myFunction()};
+// var nav = document.querySelector('.side-bar');
 
-var sticky = nav.offsetTop;
+// var sticky = nav.offsetTop;
 
-function myFunction() {
-  if (window.pageYOffset >= sticky) {
-    nav.classList.add("sticky")
-  } else {
-    nav.classList.remove("sticky");
-  }
-}
+// function myFunction() {
+//   if (window.pageYOffset >= sticky) {
+//     nav.classList.add("sticky")
+//   } else {
+//     nav.classList.remove("sticky");
+//   }
+// }
 
