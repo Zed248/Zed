@@ -358,8 +358,8 @@ footer {
     justify-content: center;
     align-items: center;
     color: black;
-    padding-top: 34pt;
-    padding-top: 34pt;
+    padding-top: 4em;
+    padding-bottom: 4em;
 }
 
 .ft-copyright p {
@@ -368,7 +368,11 @@ footer {
 
 .ft-location {
     display: flex;
-    margin-top: 23pt;
+    padding-bottom: 2em;
+}
+
+.copyright {
+    margin-bottom: 1em;
 }
 
 .copyright a {
@@ -379,15 +383,12 @@ footer {
 
 .ft-copyright i {
     width: 20px;
-    fill: black;
-    margin-right: 12pt;
-    margin-bottom: 35pt;
+    color: black;
+    transform: translateY(3px);
 }
 
-
-
-.ft-copyright i:hover {
-    fill: var(--hover-color);
+.ft-copyright i:hover, .ft-location:hover, .copyright a:hover {
+    color: var(--hover-color);
     transition: 0.3s;
 }
 
