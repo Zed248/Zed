@@ -163,14 +163,16 @@ body {
 
 section {
     width: 100%;
-    padding-left: 8em;
-    padding-right: 8em;
+    padding-left: 15em;
+    padding-right: 15em;
 }
 
 
 footer {
     background-color: var(--blog-primary-color);
     width: 100%;
+    padding-left: 15em;
+    padding-right: 15em;
 }
 
 .footer-top-bar {

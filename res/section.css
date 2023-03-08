@@ -52,7 +52,6 @@
 	align-items: center;
 	user-select: none;
 	margin-bottom: 12pt;
-	
 }
 
 .img-box-cover {
@@ -117,6 +116,7 @@
 	align-items: center;
 	padding: 4em 4em 4em 4em;
 	margin-bottom: 12pt;
+	box-shadow: 1px 3px 13px rgba(223, 212, 222, 0.212);
 }
 
 .port-content {
@@ -167,6 +167,8 @@
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
+	box-shadow: 1px 3px 25px rgba(71, 2, 68, 0.212);
+	padding: 2em;
 }
 
 .card-container h2 {
@@ -558,7 +560,7 @@
 	width: 300px;
 	font-family: var(--caption1);
 	padding: 20px;
-	color: var(--hover-color);
+	color: var(--black);
 	font-size: var(--default-fontsize);
 }
 
@@ -585,64 +587,74 @@
 
 
 /* -------------------- Software download tags --------------------- */
-.software-download-container-box {
+
+.software-download-show-case {
 	width: 100%;
-	height: auto;
-	background-color: #aaaaaa;
+	height: 500px;
 	display: flex;
 	flex-direction: column;
 	justify-content: flex-start;
 	align-items: center;
-	margin: 1em;
-}
-
-.software-download-name {
-	color: black;
-	font-family: var(--blog-sub-title);
-	font-weight: normal;
-	letter-spacing: 2px;
-	text-transform: capitalize;
-	margin: 1em;
-}
-
-.software-download-caption {
-	color: black;
+	margin: 2em;
+	box-shadow: 1px 3px 15px rgba(223, 212, 222, 0.212);
 	font-family: var(--link);
-	margin: 1em;
 }
 
-.software-download-btn {
-	background-color: black;
-	color: white;
-	width: 170px;
-	height: 30px;
-	border-radius: 20px;
+.software-download-show-case h1 {
+	width: 100%;
+	height: 60px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: var(--black);
+}
+
+.software-download-show-case p {
+	width: 100%;
+	height: 60px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: var(--black);
+	font-size: var(--default-fontsize);
+}
+
+.d-list {
+	width: 400px;
+	background-color: var(--blog-main-color);
+	font-family: var(--link);
+	font-size: var(--des-fontsize);
 	outline: none;
 	border: none;
-	margin-top: 1em;
-	margin-bottom: 4em;
 }
 
-.soft-navigator {
-	position: fixed;
-	right: 0;
-	background-color: rgba(0, 0, 0, 0.342);
-	width: 200px;
-	height: 400px;
-	padding: 1em;
+.d-list option[value] {
+	background-color: gray;
+}
+
+::selection {
+	background-color: black;
+	color: gray;
+}
+
+#soft_name {
+	color: var(--black);
+}
+
+#soft_descri {
+	width: 100%;
+	height: 200px;
 	display: flex;
-	flex-direction: column;
 	justify-content: flex-start;
 	align-items: flex-start;
+	text-align: justify;
+	padding: 2em;
 }
 
-.soft-navigator a {
-	color: black;
-	text-decoration: none;
-	cursor: pointer;
-}
-
-.soft-navigator a:hover {
-	color: var(--hover-color);
-	transition: 0.3s;
+#get_link {
+	width: 150px;
+	height: 35px;
+	border-radius: 3px;
+	outline: none;
+	border: none;
 }
