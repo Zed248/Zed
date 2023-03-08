@@ -209,7 +209,7 @@
         border-radius: 15px;
     }
 
-    /* -------------- Category classes -------- */
+    /* ----- Category classes ---- */
 
     .category-container {
         width: 100%;
@@ -231,7 +231,7 @@
         z-index: 1;
     }
 
-    /* --------- Computer-show-case ----- */
+    /* -- Computer-show-case -- */
 
     .computer-showcase {
         width: 100%;
@@ -276,6 +276,25 @@
 
     .invite .btn {
         margin-top: 1em;
+    }
+
+    /*----------------------------- Photoshop Tags-------------------- */
+    .ps-lesson-container iframe {
+        height: 200px;
+    }
+
+
+    /* -------------------- Software tags ------------------- */
+    .d-list {
+        width: 80%;
+    }
+
+    .software-d-image-container {
+        width: 100%;
+    }
+
+    .software-d-image-container #soft_img {
+        width: 90%;
     }
 
 

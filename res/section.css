@@ -659,7 +659,7 @@
 	padding: 2em;
 }
 
-.image-container {
+.software-d-image-container {
 	background-color: var(--pure-white);
 	width: 60%;
 	display: flex;
@@ -941,6 +941,8 @@
 	text-align: justify;
 	padding-top: 2em;
 	padding-bottom: 2em;
+	justify-content: flex-start;
+	width: 100%;
 }
 
 .ps-lesson-caption a {
