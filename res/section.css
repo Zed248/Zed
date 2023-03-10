@@ -12,11 +12,13 @@
     --caption2: 'Yanone Kaffeesatz';
 
     /* main colors */
-    --blog-primary-color: rgba(76, 76, 76, 0.785);
+    --blog-primary-color: rgb(0, 16, 34);
     --hover-color: #06ffff;
     --pure-white: #ffffff;
-    --gray: #4b4b4b;
-	--color1: #220038af;
+    --black: #000000;
+    --gray: gray;
+	--color1: #fff;
+
 
 
 
@@ -114,6 +116,7 @@
 	padding: 4em 4em 4em 4em;
 	margin-bottom: 12pt;
 	box-shadow: 1px 3px 13px rgba(223, 212, 222, 0.212);
+	border-radius: 50pt;
 }
 
 .port-content {
@@ -138,7 +141,7 @@
 	font-family: var(--link);
 	height: auto;
 	color: var(--color2);
-	font-weight: bold;
+	font-weight: normal;
 	margin: 3px;
 	letter-spacing: 2px;
 }
@@ -512,14 +515,14 @@
 .invite h3 {
 	font-family: var(--sub-title2);
 	margin-bottom: 12pt;
-	color: black;
+	color: var(--primary-text-color);
 }
 
 .invite p {
 	font-family: var(--caption2);
 	padding: 5px;
 	text-align: center;
-	color: black;
+	color: var(--primary-text-color);
 }
 
 .computer-showcase {
@@ -557,7 +560,7 @@
 	width: 300px;
 	font-family: var(--caption1);
 	padding: 20px;
-	color: var(--black);
+	color: var(--primary-text-color);
 	font-size: var(--default-fontsize);
 }
 
@@ -567,7 +570,7 @@
 	font-family: "Klee One";
 	background-color: var(--black);
 	border-radius: 10px;
-	color: var(--blog-main-color);
+	color: var(--color1);
 	display: block;
 	text-align: center;
 	padding: 12px;

@@ -8,11 +8,12 @@
     --caption2: 'Yanone Kaffeesatz';
 
     /* main colors */
-    --blog-primary-color: rgba(76, 76, 76, 0.785);
+    --blog-primary-color: rgb(0, 16, 34);
     --hover-color: #06ffff;
     --pure-white: #ffffff;
     --black: #000000;
     --gray: gray;
+
 
 
     /* font-size */
@@ -190,13 +191,13 @@
     
     .card-grid {
         width: 100%;
-        height: 200px;
+        height: 250px;
         transition: 0.5s;
     }
     
     .card {
         width: 200px;
-        height: 150px;
+        height: 200px;
         border-radius: 15px;
         transition: 0.5s;
         margin: 2pt;
@@ -204,7 +205,7 @@
     
     .card-background {
         width: 100%;
-        height: 150px;
+        height: 200px;
         transition: 0.5s;
         border-radius: 15px;
     }
