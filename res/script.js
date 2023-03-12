@@ -24,12 +24,14 @@ const body = document.querySelector('body');
 
 moodBtn.addEventListener('click', () => {
     if (!menuOpen) {
-        body.classList.add('active');
+        body.style.backgroundColor = 'rgba(0, 89, 131, 0.978)';
+        body.style.color = 'black';
         moodBtn.className = "fa-solid fa-moon fa-1x";
         moodBtnLabel.innerText = "Dark";
         menuOpen = true;
     } else {
-        body.classList.remove('active');
+        body.style.backgroundColor = 'rgb(0, 16, 34)';
+        body.style.color = '#000000';
         moodBtn.className = "fa-solid fa-sun fa-1x";
         moodBtnLabel.innerText = "Light";
         menuOpen = false;

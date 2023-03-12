@@ -1,59 +1,68 @@
 /* -------------- Copyright of Rakkha's Design 2022 --------- */
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Carter+One&family=Cinzel:wght@500&family=Lexend+Deca:wght@300&family=Luckiest+Guy&family=Poppins:wght@300&family=Rouge+Script&family=Yanone+Kaffeesatz&display=swap');
+
 :root {
-    --blog_title: 'Archivo Black';
-    --sub-title: 'Carter One';
-    --primary-style: 'Poppins';
-    --describ: 'Rouge Script';
-    --caption1: 'Lexend Deca';
-    --caption2: 'Yanone Kaffeesatz';
+    --main-title-font-style: 'Archivo Black';
+    --sub-title-font-style: 'Carter One';
+    --primary-font-style: 'Poppins';
+    --handwriting: 'Rouge Script';
+    --link-font-style: 'Lexend Deca';
+    --square-font-style: 'Yanone Kaffeesatz';
 
     /* main colors */
     --blog-primary-color: rgb(0, 16, 34);
+    --blog-active-bg-color: #00758a;
     --hover-color: #06ffff;
+    --primary-text-color: rgba(255, 255, 255, 0.678);
     --pure-white: #ffffff;
     --black: #000000;
     --gray: gray;
 
 
-
     /* font-size */
-    --blog-title-size: 23pt;
-    --post-title-size: 13pt;
-    --primary-Size: 11pt;
-    --min-Size: 9pt;
-
+    --font-max: 23pt;
+    --font-huge: 16pt;
+    --font-large: 13pt;
+    --font-medium: 11pt;
+    --font-small: 9pt;
+    --font-min: 7pt;
 }
+
 
 @media screen and (max-width: 740px) {
 
     .wrapper {
         padding: 0;
         overflow-x: hidden;
-        padding-right: 33pt;
-        padding-left: 33pt;
     }
    
 
 
     section {
-        width: auto;
+        width: 100%;
         padding: 1em;
+        padding-top: 6em;
+        padding-right: 4em;
+        padding-left: 4em;
     }
 
     /* ------ footer responsive------- */
     footer {
+        width: 100%;
         margin: 0;
         padding: 1em;
+        padding-right: 4em;
+        padding-left: 4em;
     }
 
     .footer-top-bar h1 {
-        font-size: 13pt;
+        font-size: var(--font-huge);
     }
 
 
     .footer-top-bar p {
         padding: 1em;
-        font-size: 10pt;
+        font-size: var(--font-medium);
     }
 
     .link-connection-for-tags a {
@@ -112,9 +121,9 @@
 
 
     .img-box-cover h1 {
-        font-family: var(--blog_title);
+        font-family: var(--main-title-font-style);
         color: var(--hover-color);
-        font-size: 30pt;
+        font-size: var(--font-max);
         text-shadow: 1px 1px 13px salmon;
         position: absolute;
         transform: translateY(-25px);
@@ -122,8 +131,8 @@
     }
 
     .img-box-cover p {
-        font-family: var(--caption1);
-        font-size: 10pt;
+        font-family: var(--primary-font-style);
+        font-size: var(--font-medium);
         color: var(--hover-color);
         text-shadow: 1px 1px 13px salmon;
         position: absolute;
@@ -138,12 +147,13 @@
         height: auto;
         margin: 0;
         padding: 1em;
+        border-radius: 3em;
     }
 
     .port-content {
         width: 50%;
         height: auto;
-        font-size: 10pt;
+        font-size: var(--font-medium)
     }
 
     .port-content h1 {
@@ -152,7 +162,7 @@
 
     .port-content p {
         height: auto;
-        font-size: 8pt;
+        font-size: var(--font-medium);
     }
 
     .port-img {
@@ -178,15 +188,15 @@
     .card-container h2 {
         letter-spacing: 2px;
         text-align: center;
-        font-size: 12pt;
+        font-size: var(--font-large);
         font-weight: normal;
         text-transform: uppercase;
     }
     
     .card-container p {
-        font-family: var(--caption1);
+        font-family: var(--primary-font-style);
         margin-top: 13pt;
-        font-size: 10pt;
+        font-size: var(--font-medium);
     }
     
     .card-grid {
@@ -270,7 +280,7 @@
     .computer-label li {
         width: 300px;
         height: 20px;
-        font-family: var(--caption1);
+        font-family: var(--primary-font-style);
         transform: translateX(0px);
     }
 
@@ -301,9 +311,13 @@
 
     /*------------------- About tag-------------------*/
     .email-me, .email-contact a {
-        width: 100px;
+        width: 180px;
         height: 30px;
+        background-color: var(--blog-active-bg-color);
+        transition: 0.3s;
     }
+
+
 
 
 }

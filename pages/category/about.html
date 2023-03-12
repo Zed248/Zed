@@ -6,11 +6,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About me</title>
-    <link rel="icon" type="image/x-icon" href="../img/logo.png">
-    <link rel="stylesheet" type="text/css" href="../res/main.css">
-    <link rel="stylesheet" type="text/css" href="../res/section.css">
-    <link rel="stylesheet" type="text/css" href="../res/responsive.css">
-    <link rel="stylesheet" type="text/css" href="../fontawesome/css/all.min.css">
+    <link rel="icon" type="image/x-icon" href="../../img/logo.png">
+    <link rel="stylesheet" type="text/css" href="../../res/main.css">
+    <link rel="stylesheet" type="text/css" href="../../res/section.css">
+    <link rel="stylesheet" type="text/css" href="../../res/responsive.css">
+    <link rel="stylesheet" type="text/css" href="../../fontawesome/css/all.min.css">
 </head>
 
 <body>
@@ -83,15 +83,19 @@
         </div>
 
         <div class="top-bar">
-            <a href="../index.html">Home</a>
-            <a href="./project.html">My Projects</a>
-            <a href="./achievement.html">Achievement</a>
-            <a href="./knowledge.html">Knowledge</a>
+            <div class="blog-title">Zed</div>
+            <a href="../../index.html">Home</a>
+            <a href="../project.html">My Projects</a>
+            <a href="../achievement.html">Achievement</a>
+            <a href="../knowledge.html">Knowledge</a>
         </div>
         <div class="top-bar-follower">
-            <div class="btns-container"><span id="side-bar-label">Side Bar</span><i class="fa-solid fa-sliders fa-1x" id="side-bar-btn"></i></div>
-            <div class="btns-container"><span id="mood-label">Light</span><i class="fa-solid fa-sun fa-1x" id="mood-btn"></i></div>
-            <div class="btns-container"><span id="login-label">Login</span><i class="fa-solid fa-unlock fa-1x"></i></div>
+            <div class="btns-container"><span id="side-bar-label">Side Bar</span><i class="fa-solid fa-sliders fa-1x"
+                    id="side-bar-btn"></i></div>
+            <div class="btns-container"><span id="mood-label">Light</span><i class="fa-solid fa-sun fa-1x"
+                    id="mood-btn"></i></div>
+            <div class="btns-container"><span id="login-label">Login</span><i class="fa-solid fa-unlock fa-1x"></i>
+            </div>
         </div>
 
         <div class="side-bar-container">
@@ -109,9 +113,9 @@
                             <span class="nav-item">Web Development</span>
                         </a>
                         <ul class="child">
-                            <li><a href="./html5.html"><i class="fa-brands fa-html5"></i>HTML</a></li>
-                            <li><a href="./css3.html"><i class="fa-brands fa-css3-alt"></i>CSS</a></li>
-                            <li><a href="./js.html"><i class="fa-brands fa-node-js"></i>JavaScript</a></li>
+                            <li><a href="../category/html5.html"><i class="fa-brands fa-html5"></i>HTML</a></li>
+                            <li><a href="../category/css3.html"><i class="fa-brands fa-css3-alt"></i>CSS</a></li>
+                            <li><a href="../category/js.html"><i class="fa-brands fa-node-js"></i>JavaScript</a></li>
                         </ul>
 
                     </li>
@@ -122,21 +126,21 @@
                         </a>
                     </li>
                     <li class="logo-and-text">
-                        <a href="./photoshop.html">
+                        <a href="../category/photoshop.html">
                             <i class="fas fa-shapes"></i>
                             <span class="nav-item">Photoshop</span>
                         </a>
                     </li>
 
                     <li class="logo-and-text">
-                        <a href="./software.html">
+                        <a href="../category/software.html">
                             <i class="fa-brands fa-app-store-ios"></i>
                             <span class="nav-item">Software Download</span>
                         </a>
                     </li>
 
                     <li class="logo-and-text">
-                        <a href="./youtube.html">
+                        <a href="../category/youtube.html">
                             <i class="fa-brands fa-youtube"></i>
                             <span class="nav-item">YouTube</span>
                         </a>
@@ -148,7 +152,11 @@
         <section>
             <div class="profile-container">
                 <div class="profile-showcase">
-                    <img src="../img/my-pp.png">
+                    <div class="pf-onhover">
+                        <div class="pf-img-container">
+                            <img id="my-img" src="../../img/my-pp.png">
+                        </div>
+                    </div>                    
                     <p class="profile-name">Rakkha Lin Maung</p>
                     <p class="profile-location"><i class="fas fa-crosshairs"></i>Rakhine State, Myanmar</p>
                     <p class="profile-caption">I design and code the user interface of websites and applications,
@@ -171,7 +179,7 @@
                         </a>
                     </div>
                     <div class="email-contact">
-                        <button class="email-me">Email me</button>
+                        <button class="email-me"><i class="fa-regular fa-envelope fa-1x"></i>Email me</button>
                         <a href="https://www.facebook.com/snakysoftware">Contact me</a>
                     </div>
 
@@ -212,7 +220,9 @@
 
 
     </div>
-    <script type="text/JavaScript" src="../res/script.js"></script>
+
+    <script type="text/JavaScript" src="../../res/script.js"></script>
+
 </body>
 
 </html>
